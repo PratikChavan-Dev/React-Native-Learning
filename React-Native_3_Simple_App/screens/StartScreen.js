@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, View, StyleSheet, Text, TextInput, TouchableOpacity, Vibration } from 'react-native'
+import PrimaryButton from '../components/PrimaryButton';
 
 const StartScreen = () => {
     return (
@@ -21,12 +22,8 @@ const StartScreen = () => {
 
 
                 <View style={styles.actionButtonsContainer}>
-                    <TouchableOpacity style={styles.actionButton} activeOpacity={0.8}>
-                        <Text style={styles.actionButtonText}>Reset</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.actionButton} activeOpacity={0.8}>
-                        <Text style={styles.actionButtonText}>Confirm</Text>
-                    </TouchableOpacity>
+                    <PrimaryButton>Reset</PrimaryButton>
+                    <PrimaryButton>Confirm</PrimaryButton>
                 </View>
 
             </View>
@@ -43,7 +40,7 @@ const styles = StyleSheet.create({
     },
     headerContainer: {
         borderWidth: 3,
-        borderColor: '#dddbc8ff',
+        borderColor: 'transparent',
         padding: 12,
         marginBottom: 24,
         backgroundColor: '#fff'
@@ -57,8 +54,13 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         backgroundColor: "#fff",
         alignItems: 'center',
-        paddingBlock: 12,
-        gap: 12
+        paddingBlock:18,
+        gap: 12,
+        elevation:1,
+        shadowColor:'red',
+        shadowOffset:{width:2,height:3},
+        shadowRadius:6,
+        shadowOpacity:0.35
 
     },
     cardHeader: {
@@ -69,8 +71,6 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     numberInputContainer: {
-        // borderWidth: 3,
-        // borderColor: 'black',
         width: '15%',
         marginBottom: 12
     },
@@ -80,21 +80,8 @@ const styles = StyleSheet.create({
     },
     actionButtonsContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         width: '90%',
         paddingHorizontal: 20,
-    },
-    actionButton: {
-        flex: 1,
-        marginHorizontal: 5,
-        backgroundColor: '#318cdbff',
-        borderRadius: 16
-    },
-    actionButtonText: {
-        textAlign: 'center',
-        padding: 6,
-        color: '#fff',
-        fontWeight: 400
     }
-
 });

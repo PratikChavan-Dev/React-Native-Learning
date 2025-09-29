@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import StartScreen from './screens/StartScreen';
+import GameScreen from './screens/GameScreen';
+import { GameOverScreen } from './screens/GameOverScreen';
 
 export default function App() {
   return (
@@ -8,6 +10,8 @@ export default function App() {
     <StatusBar style='dark' />
     <View style={styles.container}>
       <StartScreen />
+      {/* <GameScreen /> */}
+      {/* <GameOverScreen /> */}
     </View>
     </>
   );
